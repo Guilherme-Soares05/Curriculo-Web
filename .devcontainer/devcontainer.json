@@ -1,0 +1,25 @@
+{
+  // Nome do seu ambiente de desenvolvimento
+  "name": "Ubuntu Codespace",
+
+  // A linha mais importante: especifica a imagem do Ubuntu
+  // Você pode usar "ubuntu-22.04" (LTS mais recente), "ubuntu-20.04", etc.
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+
+  // (Opcional) Adicione funcionalidades extras ao seu ambiente.
+  // Exemplo: instalar o Node.js e o GitHub CLI automaticamente.
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  // (Opcional) Encaminhar uma porta para acesso no navegador
+  // Útil para desenvolvimento web.
+  "forwardPorts": [3000],
+
+  // (Opcional) Comando a ser executado após a criação do Codespace.
+  // Este comando confirma que você está no Ubuntu.
+  "postCreateCommand": "echo 'Bem-vindo ao seu Codespace com Ubuntu!' && cat /etc/lsb-release"
+}
